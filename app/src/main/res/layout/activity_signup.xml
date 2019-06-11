@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="#123456"
+
+tools:context=".AccountActivity.SignupActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:textStyle="bold"
+        android:ems="10"
+        android:textColorHint="#FAFAFA"
+        android:textColor="#FAFAFA"
+        android:hint="Enter phone"
+        />
+
+    <Button
+        android:id="@+id/buttonGetVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:textColorHint="#FAFAFA"
+        android:elevation="50dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="#FAFAFA"
+        android:text="Get OTP"
+        android:textAllCaps="false" />
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="0123456789"
+        android:textSize="25dp"
+        android:background="@null"
+        android:textStyle="italic"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#fafafa"
+        android:hint="Enter OTP received"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5DA9F5"
+        android:textColorHint="#FAFAFA"
+        android:textColor="#FAFAFA"
+        android:elevation="60dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="Verify OTP"/>
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:textColorHint="#ffffff"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@android:color/white" />
+
+
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:hint="password"
+        android:textColorHint="#ffffff"
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/sign_up_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="SignIn"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+
+
+    <!-- Link to Login Screen -->
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:text="Already User? Login!!"
+        android:textAllCaps="false"
+        android:textColor="#FAFAFA"
+        android:textSize="15sp" />
+</LinearLayout>
+</ScrollView>
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_gravity="center|bottom"
+    android:layout_marginBottom="20dp"
+    android:visibility="gone" />
+
+</LinearLayout>
