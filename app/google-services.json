@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "628365448185",
+    "firebase_url": "https://findingmyfamily-fc599.firebaseio.com",
+    "project_id": "findingmyfamily-fc599",
+    "storage_bucket": "findingmyfamily-fc599.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628365448185:android:8fa5a91434170f1b",
+        "android_client_info": {
+          "package_name": "com.example.findmyfam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628365448185-hibl8m2gkobvkucd5r9d18htnqvq3o65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findmyfam",
+            "certificate_hash": "ec890d33113c5a152e7b2795ba3b39f77836d78e"
+          }
+        },
+        {
+          "client_id": "628365448185-o7e1m1ijpjjfk51130tnmkkfenesnrhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWhQul_VHwEl1EB0EuHjtWaCzttqlsIAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628365448185-o7e1m1ijpjjfk51130tnmkkfenesnrhv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
