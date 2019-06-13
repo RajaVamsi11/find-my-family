@@ -1,9 +1,13 @@
 package com.example.findmyfam.AccountActivity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -33,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseUser auth2;
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
+    static final Integer LOCATION = 0x1;
+    static final Integer Contacts = 0x2;
+    static final Integer Telephony = 0x3;
 
 
     @Override
@@ -40,6 +47,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //Get Firebase auth instance
+
+        //Request Permissions
+        askForPermission(Manifest.permission.ACCESS_FINE_LOCATION, LOCATION);
+        askForPermission(Manifest.permission.READ_CONTACTS, Contacts);
+        askForPermission(Manifest.permission.READ_PHONE_STATE, Telephony);
+        askForPermission(Manifest.permission.ACCESS_COARSE_LOCATION, LOCATION);
+
 
         FirebaseMessaging.getInstance().subscribeToTopic("updates");
         auth = FirebaseAuth.getInstance();
@@ -162,10 +176,32 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
+
+
     @Override
     protected void onStop() {
         super.onStop();
 
+    }
+
+    private void askForPermission(String permission, Integer requestCode) {
+        if (ContextCompat.checkSelfPermission(LoginActivity.this, permission) != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permission)) {
+
+                //This is called if user has denied the permission before
+                //In this case I am just asking the permission again
+                ActivityCompat.requestPermissions(LoginActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.READ_CONTACTS}, requestCode);
+
+            } else {
+
+                ActivityCompat.requestPermissions(LoginActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.READ_CONTACTS}, requestCode);
+            }
+        } else {
+
+        }
     }
 
 

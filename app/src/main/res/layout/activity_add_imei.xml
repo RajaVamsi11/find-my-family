@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_text"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/info_text"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:textColor="#000"
+        android:shadowRadius="6"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Add Info"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/IMEI_textinputlayout"
+        android:layout_below="@id/info_text">
+    <EditText
+        android:id="@+id/IMEI"
+        android:layout_below="@id/info_text"
+        android:textColorHint="#c58"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="8dp"
+        android:padding="6dp"
+        android:hint="IMEI"
+        android:layout_marginRight="6dp" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IMEI_textinputlayout"
+        android:id="@+id/Name_textInputLayout">
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textColorHint="#c58"
+        android:padding="6dp"
+        android:layout_marginBottom="8dp"
+
+        />
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textSize="16dp"
+        android:textColor="#c58"
+        android:layout_toLeftOf="@id/addImei"
+        android:layout_marginTop="5dp"
+        android:background="@color/fui_transparent"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/Name_textInputLayout"
+
+        />
+
+    <Button
+        android:id="@+id/addImei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="16dp"
+        android:textColor="#c58"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/fui_transparent"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/Name_textInputLayout"
+
+        />
+
+</RelativeLayout>
